@@ -1,0 +1,49 @@
+common:
+  containerRegistryURL: mdmregistry310383.azurecr.io
+  ingressClass: nginx
+  
+ui:
+  replicas: 2
+  image:
+    name: frontend/new-ui
+    tag: latest
+  port: 80
+  ServicePort: 80
+  ingress:
+    host: tech.mademitech.online
+
+getTask:
+  replicas: 2
+  image:
+    name: backend/new-get-task
+    tag: latest
+  port: 8000
+  ServicePort: 80
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd=Netweb@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30"
+  ingress:
+    host: gettasks.mademitech.online
+    ingressClass: nginx
+
+deleteTask:
+  replicas: 2
+  image:
+    name: backend/new-delete-task
+    tag: latest
+  port: 8000
+  ServicePort: 80
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd=Netweb@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30"
+  ingress:
+    host: deletetasks.mademitech.online
+    ingressClass: nginx
+
+addTask:
+  replicas: 2
+  image:
+    name: backend/new-add-task
+    tag: latest
+  port: 8000
+  ServicePort: 80
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd=Netweb@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30"
+  ingress:
+    host: addtasks.mademitech.online
+    ingressClass: nginx
