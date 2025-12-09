@@ -19,7 +19,7 @@ getTask:
     tag: latest
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd=Netweb@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: gettasks.mademitech.online
     ingressClass: nginx
@@ -31,7 +31,7 @@ deleteTask:
     tag: latest
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd=Netweb@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: deletetasks.mademitech.online
     ingressClass: nginx
@@ -43,7 +43,7 @@ addTask:
     tag: latest
   port: 8000
   ServicePort: 80
-  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:mdm-sql-server1.database.windows.net,1433;Database=mdm-db1;Uid=deepak;Pwd=Netweb@123;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
   ingress:
     host: addtasks.mademitech.online
     ingressClass: nginx
