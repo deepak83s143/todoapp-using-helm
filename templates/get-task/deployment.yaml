@@ -12,6 +12,8 @@ spec:
       labels:
         app: {{ .Release.Name }}-todo-get-task-api
     spec:
+      imagePullSecrets:
+      - name: acr-auth
       containers:
       - name: {{ .Release.Name }}-todo-get-task-api
         image: "{{ .Values.common.containerRegistryURL }}/{{ .Values.getTask.image.name }}:{{ .Values.getTask.image.tag }}"

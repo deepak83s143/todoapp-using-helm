@@ -12,6 +12,8 @@ spec:
       labels:
         app: {{ .Release.Name }}-todo-delete-tasks-api
     spec:
+      imagePullSecrets:
+      - name: acr-auth
       containers:
       - name: {{ .Release.Name }}-todo-delete-tasks-api
         image: "{{ .Values.common.containerRegistryURL }}/{{ .Values.deleteTask.image.name }}:{{ .Values.deleteTask.image.tag }}"
