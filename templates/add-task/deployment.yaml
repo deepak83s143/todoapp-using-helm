@@ -12,10 +12,10 @@ spec:
       labels:
         app: {{ .Release.Name }}-todo-add-tasks-api
     spec:
+      imagePullSecrets:
+      - name: acr-auth
       containers:
       - name: {{ .Release.Name }}-todo-add-tasks-api
-        imagePullSecrets:
-        - name: acr-auth
         image: "{{ .Values.common.containerRegistryURL }}/{{ .Values.addTask.image.name }}:{{ .Values.addTask.image.tag }}"
         ports:
         - containerPort: {{ .Values.addTask.port }}
